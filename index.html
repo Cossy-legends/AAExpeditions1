@@ -293,73 +293,75 @@ https://templatemo.com/tm-545-finance-business
     </div>
 
     <div class="callback-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Request a <em>call back</em></h2>
-              <span>Africa Agro-Science Expeditions</span>
-            </div>
-          </div>
-          
-          <div class="col-md-12">
-            <div class="contact-form">
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="border-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Request a <em>call back</em></h2>
+          <span>Africa Agro-Science Expeditions</span>
         </div>
       </div>
+      
+      <div class="col-md-12">
+        <div class="contact-form">
+          <form id="contact">
+            <div class="row">
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" class="border-button">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
 document.getElementById("contact").addEventListener("submit", function(e){
-e.preventDefault();
+  e.preventDefault();
 
-var name = document.getElementById("name").value;
-var email = document.getElementById("email").value;
-var subject = document.getElementById("subject").value;
-var message = document.getElementById("message").value;
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
 
-var text = "New Call Back Request%0A%0A"
-+ "Name: " + name + "%0A"
-+ "Email: " + email + "%0A"
-+ "Subject: " + subject + "%0A"
-+ "Message: " + message;
+  var body = "New Call Back Request\n\n"
+    + "Name: " + name + "\n"
+    + "Email: " + email + "\n"
+    + "Subject: " + subject + "\n"
+    + "Message: " + message;
 
-var url = "https://wa.me/254722841438?text=" + text;
+  var mailtoLink = "mailto:info@agroscienceexpeditions.africa"
+    + "?subject=" + encodeURIComponent("New Call Back Request")
+    + "&body=" + encodeURIComponent(body);
 
-window.open(url, "_blank");
+  window.location.href = mailtoLink;
 });
 </script>
-
+    
     <!-- Footer Starts Here -->
     <footer>
       <div class="container">
