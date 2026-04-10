@@ -348,7 +348,7 @@ document.getElementById("contact").addEventListener("submit", function(e){
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
 
-  var body = "New Call Back Request\n\n"
+  var body = "Agroscience Website Message\n\n"
     + "Name: " + name + "\n"
     + "Email: " + email + "\n"
     + "Subject: " + subject + "\n"
@@ -426,13 +426,13 @@ var name = document.getElementById("footer-name").value;
 var email = document.getElementById("footer-email").value;
 var message = document.getElementById("footer-message").value;
 
-var body = "New Website Message\n\n"
+var body = "Agroscience Website Message\n\n"
 + "Name: " + name + "\n"
 + "Email: " + email + "\n"
 + "Message: " + message;
 
 var mailtoLink = "mailto:info@agroscienceexpeditions.africa"
-+ "?subject=" + encodeURIComponent("New Website Message")
++ "?subject=" + encodeURIComponent("Agroscience Website Message")
 + "&body=" + encodeURIComponent(body);
 
 window.location.href = mailtoLink;
