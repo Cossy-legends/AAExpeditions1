@@ -418,7 +418,7 @@ document.getElementById("contact").addEventListener("submit", function(e){
   </div>
 </div>
 
-<script>
+          <script>
 document.getElementById("footer-contact").addEventListener("submit", function(e){
 e.preventDefault();
 
@@ -426,16 +426,19 @@ var name = document.getElementById("footer-name").value;
 var email = document.getElementById("footer-email").value;
 var message = document.getElementById("footer-message").value;
 
-var text = "New Website Message%0A%0A"
-+ "Name: " + name + "%0A"
-+ "Email: " + email + "%0A"
+var body = "New Website Message\n\n"
++ "Name: " + name + "\n"
++ "Email: " + email + "\n"
 + "Message: " + message;
 
-var url = "https://wa.me/254722841438?text=" + text;
+var mailtoLink = "mailto:info@agroscienceexpeditions.africa"
++ "?subject=" + encodeURIComponent("New Website Message")
++ "&body=" + encodeURIComponent(body);
 
-window.open(url, "_blank");
+window.location.href = mailtoLink;
 });
 </script>
+          
     </footer>
     
     <div class="sub-footer">
